@@ -1,15 +1,11 @@
 import styled from 'styled-components';
 
-interface IContainerProps {
-    color: string;
-}
-
 interface ITagProps {
     color: string;
 }
 
-export const Container = styled.li<IContainerProps>`
-    background-color: ${props => props.color};
+export const Container = styled.li`
+    background-color: ${props => props.theme.colors.tertiart};
 
 
     list-style: none;
@@ -25,7 +21,7 @@ export const Container = styled.li<IContainerProps>`
 
     position: relative;
 
-    &::hover{
+    &:hover{
         opacity: .7;
         transform: translateX(10px);
     }
